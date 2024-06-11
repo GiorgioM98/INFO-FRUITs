@@ -1,27 +1,27 @@
-## Panoramica
+## Overview
 
-L'applicazione si concentra sulla divulgazione di una sana alimentazione!
+The application focuses on promoting healthy eating habits! This platform features a list of fruits which, when clicked, provide nutritional values for each fruit along with additional information.
 
 
 ### Dashboard
 
-Il design della piattaforma è stato ideato con uno stile minimalista e moderno, la dashboard presenta colori pensati apposta per il tipo di applicazione e in sintonia con le immagini.
+The platform's design is minimalistic and modern, featuring colors that are specifically chosen to suit the type of application and harmonize with the images.
 
 
-### Ricerca Frutti
+### Fruit Search
 
-Per semplificare la ricerca dei frutti, la pagina fornisce un input di ricerca.
+To simplify the search for fruits, the page provides a search input.
 
 
- ### Dettagli frutti
+ ### Fruit Details
 
-Tramite i vari contenitori dei frutti, premendo sopra, oltre ad avere un effetto rotativo visivo, si aprirà una finestra, dove si portanno vedere le varie informazioni del frutto selezionato.
-Nella prima tabella le info del frutto saranno: 
--La famiglia botanica a cui appartiene il frutto.
--L'ordine botanico a cui appartiene la famiglia.
--Il genere botanico del frutto.
+Through the various fruit containers, clicking on one will trigger a visual rotating effect, and a window will open where you can view the selected fruit's information.
+In the first table, the fruit information includes:
+-The botanical family to which the fruit belongs.
+-The botanical order to which the family belongs.
+-The botanical genus of the fruit.
 
-Nella seconda tabella si potranno leggere i valori nutrizionali del frutto:
+In the second table, you can read the nutritional values of the fruit:
 -Calories
 -Fat
 -Sugar
@@ -31,57 +31,60 @@ Nella seconda tabella si potranno leggere i valori nutrizionali del frutto:
 
 ### Footer
 
-Il footer è caratterizzato dalle info dello sviluppatore con il link che rimanda al suo profilo LinkedIn.
+The footer features the developer's information along with a link to their LinkedIn profile.
 
 
-## Guida di Installazione
+## Installation Guide
 
-Per inizializzare il progetto sul proprio device, seguire i seguenti passaggi:
+To initialize the project on your device, follow these steps:
 
-1. Clonare il repository sul proprio sistema locale.
-2. Eseguire `npm install` per installare le dipendenze.
-3. Configurare l'ambiente locale, se necessario.
-4. Eseguire `ng serve --open` per avviare l'applicazione in modalità sviluppo e attendere l'apertura automatica del browser.
+1. Clone the repository to your local system.
+2. Run npm install to install the dependencies.
+3. Configure the local environment if necessary.
+4. Run ng serve --open to start the application in development mode and wait for the browser to open automatically.
 
-## IMPORTANTE
+## IMPORTANT
 
-Nel nostro progetto, dobbiamo accedere a un'API esterna per ottenere dati sui frutti. Tuttavia, a causa delle restrizioni CORS impostate dal server dell'API, non è possibile fare richieste dirette dall'applicazione frontend al server dell'API. Questo causa errori di CORS e impedisce il corretto funzionamento del sito.
-Per risolvere questo problema, abbiamo implementato un proxy sul nostro server. Un proxy funge da intermediario tra la nostra applicazione frontend e l'API esterna. Quando il frontend necessita di dati dall'API, invia una richiesta al proxy. Il proxy, a sua volta, fa la richiesta all'API esterna e poi restituisce i dati al frontend. Questo metodo aggira le restrizioni CORS perché il browser vede la richiesta come proveniente dal nostro stesso dominio.
-
-
-## Struttura del Progetto
-
-Il progetto è strutturato in modo seguente:
-
-- `src/`: Contiene il codice sorgente dell'applicazione.
-  - `app/`: Contiene i componenti, i servizi e i moduli dell'app.
-  - `assets/`: Contiene risorse come immagini e file statici.
-- `node_modules/`: Contiene le dipendenze del progetto.
-- `angular.json`: File di configurazione per Angular CLI.
-- `package.json`: File di configurazione per le dipendenze del progetto.
+In our project, we need to access an external API to get fruit data. However, due to CORS (Cross-Origin Resource Sharing) restrictions set by the API server, it is not possible to make direct requests from the frontend application to the API server. This causes CORS errors and prevents the site from functioning correctly.
+To solve this problem, we have implemented a proxy on our server. A proxy acts as an intermediary between our frontend application and the external API. When the frontend needs data from the API, it sends a request to the proxy. The proxy, in turn, makes the request to the external API and then returns the data to the frontend. This method bypasses the CORS restrictions because the browser sees the request as coming from our own domain.
 
 
-## Risoluzione dei Problemi Comuni
+## Project Structure
 
-### Problema: L'applicazione non si avvia correttamente
+The project is structured as follows:
 
-- **Soluzione:** Assicurarsi di aver eseguito `npm install` per installare le dipendenze. Controllare la console per eventuali errori durante l'avvio.
+- `src/`: Contains the application's source code
+  - `app/`: Contains the app's components, services, and modules.
+  - `assets/`: Contains resources like images and static files.
+- `node_modules/`: Contains the project's dependencies.
+- `angular.json`: Configuration file for Angular CLI.
+- `package.json`: Configuration file for the project's dependencies.
+
+
+## Troubleshooting Common Issues
+
+### Issue: The application does not start correctly
+
+- **Solution:**  Ensure that you have run npm install to install the dependencies. Check the console for any errors during startup.
+
 
 ## API Endpoints
 
-L'applicazione si interfaccia con l'API di FRUITYVICE per fornire informazioni sui vari frutti. Di seguito sono elencati gli endpoints principali forniti dalla classe `HttpService`:
+The application interfaces with the FRUITYVICE API to provide information about various fruits. Below are the main endpoints provided by the HttpService class:
+
 
 ### Get list of all fruits
 
   - Metodo: `GET`
   - Endpoint: `api/fruit/all`
-  - Descrizione: Lista di tutti i frutti.
+  - Description: List of all fruits.
 
 
 ### Fruit Details
 
   - Metodo: `GET`
   - Endpoint: `api/fruit/{name}`
-  - Descrizione: Ottiene le informazioni di un frutto specifico.
+  - Description: Gets information for a specific fruit.
 
-Questo progetto è stato generato con la versione 17.3.0. ('https://v17.angular.io/docs')
+
+This project was generated with version 17.3.0 of Angular ('https://v17.angular.io/docs').

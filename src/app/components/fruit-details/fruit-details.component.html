@@ -1,0 +1,62 @@
+<div class="container">
+
+  <!-- principal container -->
+  <div class="containerTitle">
+    <!-- title -->
+    <h1>{{ fruitDetails?.name }}</h1>
+    <!-- table -->
+    <table matSort class="styled-table">
+      <tr>
+        <td><b>Family</b></td>
+        <td>{{ fruitDetails?.family}}</td>
+      </tr>
+      <tr>
+        <td><b>Order</b></td>
+        <td>{{ fruitDetails?.order}}</td>
+      </tr>
+      <tr>
+        <td><b>Genus</b></td>
+        <td>{{ fruitDetails?.genus}}</td>
+      </tr>
+    </table>
+
+  </div>
+
+  <!-- second container -->
+  <div class="containerTable">
+    <!-- title -->
+    <h1>Nutritions per 100g</h1>
+    <!-- table -->
+    <table matSort class="styled-table">
+      <tr>
+        <th class="nutritions" mat-sort-header="name">NUTRITIONS</th>
+        <th mat-sort-header="calories">QUANTITY</th>
+      </tr>
+      <tr>
+        <td><b>Calories</b></td>
+        <td>{{ fruitDetails?.nutritions?.calories }}</td>
+      </tr>
+      <tr>
+        <td><b>Fat</b></td>
+        <td>{{ fruitDetails?.nutritions?.fat}}</td>
+      </tr>
+      <tr>
+        <td><b>Sugar</b></td>
+        <td>{{ fruitDetails?.nutritions?.sugar}}</td>
+      </tr>
+      <tr>
+        <td><b>Carbohydrates</b></td>
+        <td>{{ fruitDetails?.nutritions?.carbohydrates}}</td>
+      </tr>
+      <tr>
+        <td><b>Protein</b></td>
+        <td>{{ fruitDetails?.nutritions?.protein}}</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<!-- button close dialog -->
+<div class="containerBtnClose" mat-dialog-actions>
+  <button class="btnClose" mat-button (click)="chiudi()">Chiudi</button>
+</div>

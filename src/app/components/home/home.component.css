@@ -1,0 +1,175 @@
+/* animatione */
+@keyframes rotatePage {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.cardFruits:hover {
+  animation: rotatePage 0.5s ease-in-out;
+}
+
+.containerSearch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url("../../../assets/img/sfondo.webp");
+  background-color: rgba(0, 0, 0, 0.3);
+  background-blend-mode: darken;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: auto;
+}
+
+.containerResults {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1em;
+  padding-top: 4em;
+  width: 80%;
+  margin: auto;
+  margin-top: 2em;
+  border-top: 1px solid black;
+}
+
+.cardFruits {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  margin-bottom: 3em;
+  height: 150px;
+  background-image: url("../../../assets/img/frutta.jpg");
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  color: white;
+  text-align: center;
+}
+
+.cardFruits:hover {
+  animation: rotatePage 0.5s ease-in-out;
+  box-shadow: 0 0px 20px #40147a;
+}
+
+.name {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+  margin: 1em;
+  line-height: 1.5em;
+}
+
+.example-form {
+  max-width: 500px;
+  width: 80%;
+}
+
+.title2 {
+  display: block;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  margin-top: 3em;
+}
+
+.footer {
+  display: block;
+  text-align: center;
+  background: rgb(43, 0, 103);
+  background: linear-gradient(
+    90deg,
+    rgba(43, 0, 103, 1) 0%,
+    rgba(253, 29, 29, 1) 94%,
+    rgba(252, 69, 69, 1) 100%
+  );
+  width: 100%;
+  height: auto;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  color: white;
+}
+
+.footer p {
+  font-size: 1em;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+}
+
+a:hover {
+  color: white;
+}
+
+/* mobile */
+@media screen and (min-width: 375px) and (max-width: 600px) {
+  .containerResults {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 2em;
+    margin-top: 1em;
+  }
+
+  .cardFruits {
+    margin: 1em;
+  }
+}
+
+/* tablet */
+@media (min-width: 563px) and (max-width: 768px) {
+  .containerResults {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 2em;
+    margin-top: 2em;
+  }
+
+  .cardFruits {
+    margin: 1em;
+  }
+}
+
+/* desktop */
+@media (min-width: 769px) {
+  .containerResults {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 3em;
+    margin-top: 3em;
+  }
+
+  .cardFruits {
+    margin: 1em;
+  }
+
+  .containerSearch {
+    height: 70vh;
+  }
+}

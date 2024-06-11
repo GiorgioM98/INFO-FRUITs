@@ -1,0 +1,40 @@
+<div class="containerHome">
+
+
+  <!-- principlae container -->
+  <div class="containerSearch">
+    <!-- title -->
+    <h1 class="title"><b>Explore Nutritional Values of Fruits
+        <br>
+        Discover the Healthy and Sustainable Benefits of Fruits:
+        <br>
+        find the Nutritional Values that Will Transform Your Diet</b></h1>
+    <!-- input ricerca -->
+    <mat-form-field class="example-form">
+      <mat-label>Search</mat-label>
+      <input type="search" matInput [(ngModel)]="searchQuery" (input)="filterFruits()">
+      <button matSuffix mat-icon-button type="submit" (click)="filterFruits()">
+        <mat-icon matSuffix aria-label="Example icon-button with search icon">search</mat-icon>
+      </button>
+    </mat-form-field>
+
+  </div>
+
+
+  <!-- title -->
+  <h1 class="title2">ALL FRUITS</h1>
+  <!-- second container -->
+  <div class="containerResults">
+    <div class="cardFruits" *ngFor="let fruit of filteredFruits" (click)="dialogDetails(fruit)">
+      <h4 class="name">{{ fruit.name }}</h4>
+    </div>
+  </div>
+
+
+</div>
+
+<!-- footer -->
+<div class="footer">
+  <p>© 2024 Copyright: GM (Giorgio Marian)</p>
+  <p>Profilo LinkedIn <a href="https://www.linkedin.com/in/giorgio-marian-6b9b9b1b0/" target="_blank"> QUI</a></p>
+</div>
